@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+/* Barre latérale */
+.sidebar {
+    width: 250px;
+    background-color: #005bb5;
+    color: white;
+    padding: 20px;
+    height: 100vh;
+    position: fixed;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    transition: background 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #0078d7;
+    border-radius: 5px;
+}
+
+/* Contenu principal */
+.content {
+    margin-left: 260px;
+    padding: 20px;
+    flex-grow: 1;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* Section "Nos missions" */
+.cards {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    text-align: center;
+}
+
+.card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .content {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+    footer p {
+        margin: 0;
+        font-size: 0.9rem;
+        text-align: center; /* Ajout de cette ligne pour centrer le texte */
+    }
+    footer {
+        background-color: #0078d7;
+        color: white;
+        text-align: center;
+        padding: 1rem;
+        margin-top: 3rem;
+        display: flex; /* Ajout de cette ligne */
+        justify-content: center; /* Ajout de cette ligne */
+        align-items: center; /* Ajout de cette ligne pour centrer verticalement */
+    }
+    
+}
